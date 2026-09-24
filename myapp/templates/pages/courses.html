@@ -1,0 +1,346 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} Index page {% endblock title %}
+{% block content %}
+
+
+    <!-- COURSES HERO -->
+
+    <section class="courses-hero">
+
+        <div class="container">
+
+            <div class="courses-hero-content">
+
+                <p class="breadcrumb-text">
+                    <a href="{% url 'index_page' %}">Home</a> &nbsp;›&nbsp; Courses
+                </p>
+
+                <h1>Our Courses</h1>
+
+                <div class="title-line"></div>
+
+                <p>
+                    Explore our wide range of courses designed to help
+                    students achieve their academic goals and build a
+                    successful future.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COURSES -->
+
+    <section class="all-courses">
+
+        <div class="container">
+
+            <div class="head-title">
+
+                <h1>Choose Your Path to Success</h1>
+
+            </div>
+
+
+            <div class="row">
+
+
+                <!-- JEE -->
+
+                <div class="col-lg-3 col-md-6 mb-4">
+
+                    <div class="course-card">
+
+                        <div class="course-icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+
+                        <h3>JEE (Mains & Advanced)</h3>
+
+                        <span class="course-type">
+                            Engineering Entrance
+                        </span>
+
+                        <p>
+                            Comprehensive preparation for JEE Main
+                            & Advanced with expert guidance, regular
+                            tests and doubt sessions.
+                        </p>
+
+                        <div class="course-info">
+
+                            <div>
+                                <i class="bi bi-clock"></i>
+                                <strong>2 Years</strong>
+                                <small>Duration</small>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-people-fill"></i>
+                                <strong>XI to XII</strong>
+                                <small>For Class</small>
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li>Expert Faculty</li>
+                            <li>Regular Tests & Analysis</li>
+                            <li>Updated Study Material</li>
+                            <li>Doubt Clearing Sessions</li>
+                        </ul>
+
+                        <div class="course-buttons">
+
+                            <a href="#jee-details" class="btn-view">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                            <a href="#" class="btn-enroll">
+                                Enroll Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NEET -->
+
+                <div class="col-lg-3 col-md-6 mb-4">
+
+                    <div class="course-card">
+
+                        <div class="course-icon neet">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+
+                        <h3>NEET</h3>
+
+                        <span class="course-type">
+                            Medical Entrance
+                        </span>
+
+                        <p>
+                            Complete preparation for NEET with
+                            concept clarity, practice tests and
+                            personalized mentoring.
+                        </p>
+
+                        <div class="course-info">
+
+                            <div>
+                                <i class="bi bi-clock"></i>
+                                <strong>2 Years</strong>
+                                <small>Duration</small>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-people-fill"></i>
+                                <strong>XI to XII</strong>
+                                <small>For Class</small>
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li>Experienced Faculty</li>
+                            <li>NCERT Based Study</li>
+                            <li>Regular Mock Tests</li>
+                            <li>Personal Mentoring</li>
+                        </ul>
+
+                        <div class="course-buttons">
+
+                            <a href="#neet-details" class="btn-view">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                            <a href="#" class="btn-enroll">
+                                Enroll Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CLASS 9-10 -->
+
+                <div class="col-lg-3 col-md-6 mb-4">
+
+                    <div class="course-card">
+
+                        <div class="course-icon foundation">
+                            <i class="bi bi-book"></i>
+                        </div>
+
+                        <h3>Class 9 - 10</h3>
+
+                        <span class="course-type">
+                            Foundation Course
+                        </span>
+
+                        <p>
+                            Strong foundation for future competitive
+                            exams with concept building and regular
+                            practice.
+                        </p>
+
+                        <div class="course-info">
+
+                            <div>
+                                <i class="bi bi-clock"></i>
+                                <strong>2 Years</strong>
+                                <small>Duration</small>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-people-fill"></i>
+                                <strong>IX to X</strong>
+                                <small>For Class</small>
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li>Concept Clarity</li>
+                            <li>Weekly Tests</li>
+                            <li>Subject Wise Notes</li>
+                            <li>Performance Tracking</li>
+                        </ul>
+
+                        <div class="course-buttons">
+
+                            <a href="#foundation-details" class="btn-view">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                            <a href="#" class="btn-enroll">
+                                Enroll Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CLASS 11-12 -->
+
+                <div class="col-lg-3 col-md-6 mb-4">
+
+                    <div class="course-card">
+
+                        <div class="course-icon board">
+                            <i class="bi bi-journal-bookmark"></i>
+                        </div>
+
+                        <h3>Class 11 - 12</h3>
+
+                        <span class="course-type">
+                            Board Preparation
+                        </span>
+
+                        <p>
+                            Complete preparation for Board Exams
+                            with concept clarity, sample papers
+                            and expert guidance.
+                        </p>
+
+                        <div class="course-info">
+
+                            <div>
+                                <i class="bi bi-clock"></i>
+                                <strong>2 Years</strong>
+                                <small>Duration</small>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-people-fill"></i>
+                                <strong>XI to XII</strong>
+                                <small>For Class</small>
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li>Chapter Wise Tests</li>
+                            <li>Previous Year Papers</li>
+                            <li>Individual Attention</li>
+                            <li>Performance Analysis</li>
+                        </ul>
+
+                        <div class="course-buttons">
+
+                            <a href="#board-details" class="btn-view">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                            <a href="#" class="btn-enroll">
+                                Enroll Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HELP -->
+
+    <section class="course-help">
+
+        <div class="container">
+
+            <div class="help-box">
+
+                <div class="help-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+
+                <div>
+                    <h3>
+                        Need Help Choosing the Right Course?
+                    </h3>
+
+                    <p>
+                        Our academic counsellors are here to help
+                        you choose the best course for your goals.
+                    </p>
+                </div>
+
+                <a href="index.html#contact" class="btn btn-primary">
+                    Talk to Counsellor
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    {% endblock content %}
+    <!-- FOOTER -->

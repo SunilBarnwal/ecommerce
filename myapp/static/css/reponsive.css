@@ -1,0 +1,727 @@
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+
+/* ---------- LARGE TABLET / SMALL LAPTOP ---------- */
+
+@media (max-width: 1200px){
+
+    .container{
+        max-width: 960px;
+    }
+
+    .navbar-brand img{
+        width:130px;
+        height:auto;
+    }
+
+    .nav-link{
+        margin:0 7px;
+    }
+
+    .xy span{
+        font-size:50px;
+    }
+
+    .info .card{
+        height:180px;
+    }
+
+    .info .icon-box{
+        width:60px;
+        height:60px;
+        min-width:60px;
+        margin-right:12px;
+    }
+
+    .info .icon-box i{
+        font-size:25px;
+    }
+
+    .info .content h5{
+        font-size:17px;
+    }
+
+    .info .content p{
+        font-size:13px;
+    }
+
+    .courses-menu .card-body{
+        padding:25px;
+    }
+
+    .courses-menu .content h5{
+        font-size:19px;
+    }
+
+    .about-us h3{
+        font-size:30px;
+    }
+
+    .achieve .ac-icons{
+        width:55px;
+        height:55px;
+        min-width:55px;
+        margin-right:12px;
+    }
+
+    .achieve .ac-icons i{
+        font-size:24px;
+    }
+
+    .achieve .ac-content h1{
+        font-size:27px;
+    }
+
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 991px){
+
+    body{
+        margin-top:70px;
+    }
+
+    .navbar{
+        height:auto;
+        min-height:70px;
+    }
+
+    .navbar-brand img{
+        width:125px;
+        height:auto;
+    }
+
+    .navbar-collapse{
+        background:#fff;
+        padding:15px;
+        margin-top:10px;
+        border-radius:10px;
+        box-shadow:0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .navbar-nav{
+        text-align:center;
+    }
+
+    .nav-link{
+        margin:5px 0;
+        padding:10px;
+    }
+
+    .navbar .btn-primary{
+        display:block;
+        width:150px;
+        margin:10px auto 5px;
+    }
+
+
+    /* HERO */
+
+    .carousel-item img{
+        height:400px;
+        /* object-fit:cover; */
+    }
+
+    .xy{
+        left:7%;
+    }
+
+    .xy span{
+        font-size:42px;
+    }
+
+
+    /* FEATURES */
+
+    .info{
+        padding:25px 0;
+    }
+
+    .info .card{
+        height:160px;
+        margin-bottom:20px;
+    }
+
+    .info .card-body{
+        padding:15px;
+    }
+
+
+    /* COURSES */
+
+    .courses-menu{
+        padding:60px 0;
+    }
+
+    .courses-menu .card{
+        margin-bottom:25px;
+    }
+
+
+    /* ABOUT */
+
+    .about-us{
+        padding:60px 0;
+    }
+
+    .about-us .row{
+        align-items:center;
+    }
+
+    .about-us h3{
+        font-size:28px;
+        margin-top:30px;
+    }
+
+
+    /* ACHIEVEMENT */
+
+    .achieve{
+        height:auto;
+        padding:20px 0;
+    }
+
+    .achieve .col-md-3{
+        margin-bottom:15px;
+    }
+
+    .achieve .col-md-3::after{
+        display:none;
+    }
+
+
+    /* FEEDBACK */
+
+    .feed-card{
+        margin-bottom:20px;
+    }
+
+    .feed-form .col-md-4,
+    .feed-form .col-md-8{
+        border-radius:20px;
+    }
+
+    .feed-form .col-md-4{
+        margin-bottom:20px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-col{
+        margin-bottom:30px;
+    }
+
+
+    /* COURSES PAGE */
+
+    .courses-hero{
+        min-height:220px;
+    }
+
+    .courses-hero h1{
+        font-size:42px;
+    }
+
+    .course-card{
+        margin-bottom:20px;
+    }
+
+    .help-box{
+        flex-wrap:wrap;
+    }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 767px){
+
+    body{
+        margin-top:70px;
+    }
+
+    .container{
+        width:100%;
+        max-width:100%;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .container-fluid{
+        padding-left:0;
+        padding-right:0;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar{
+        min-height:70px;
+        padding:5px 15px;
+    }
+
+    .navbar-brand img{
+        width:115px;
+        height:auto;
+    }
+
+    .navbar-toggler{
+        padding:5px 8px;
+    }
+
+
+    /* HERO */
+
+    .carousel-item img{
+        width:100%;
+        height:280px;
+        object-fit:cover;
+    }
+
+    .xy{
+        left:6%;
+        top:50%;
+    }
+
+    .xy span{
+        font-size:32px;
+        margin-bottom:12px;
+    }
+
+    .xy .btn{
+        padding:8px 18px;
+        font-size:13px;
+    }
+
+
+    /* FEATURES */
+
+    .info{
+        padding:20px 0;
+    }
+
+    .info .col-lg-3{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .info .card{
+        height:auto;
+        min-height:130px;
+        margin-bottom:15px;
+    }
+
+    .info .card-body{
+        padding:18px;
+    }
+
+    .info .icon-box{
+        width:55px;
+        height:55px;
+        min-width:55px;
+        margin-right:15px;
+    }
+
+    .info .icon-box i{
+        font-size:23px;
+    }
+
+    .info .content h5{
+        font-size:17px;
+    }
+
+    .info .content p{
+        font-size:13px;
+        line-height:1.5;
+    }
+
+
+    /* SECTION HEADINGS */
+
+    .head-title{
+        margin-bottom:35px;
+    }
+
+    .head-title h1{
+        font-size:30px;
+    }
+
+    .head-title h1::after{
+        width:55px;
+        height:3px;
+        bottom:-10px;
+    }
+
+
+    /* COURSES */
+
+    .courses-menu{
+        padding:50px 0;
+    }
+
+    .courses-menu .card{
+        height:auto;
+        margin-bottom:20px;
+    }
+
+    .courses-menu .card-body{
+        padding:25px;
+    }
+
+    .courses-menu .content h5{
+        font-size:20px;
+    }
+
+
+    /* ABOUT */
+
+    .about-us{
+        padding:50px 0;
+    }
+
+    .about-us .head-title h2{
+        font-size:30px;
+    }
+
+    .about-us h3{
+        font-size:25px;
+        margin-top:30px;
+    }
+
+    .about-us p{
+        font-size:14px;
+        line-height:1.7;
+        text-align:left;
+    }
+
+    .about-list div{
+        font-size:14px;
+        margin-bottom:12px;
+    }
+
+    .about-us img{
+        width:100%;
+        max-width:400px;
+        display:block;
+        margin:auto;
+    }
+
+
+    /* ACHIEVEMENTS */
+
+    .achieve{
+        height:auto;
+        padding:25px 0;
+    }
+
+    .achieve .row{
+        margin:0;
+    }
+
+    .achieve .col-md-3{
+        width:50%;
+        margin-bottom:25px;
+    }
+
+    .achieve .col-md-3:not(:last-child)::after{
+        display:none;
+    }
+
+    .achieve .ac-icons{
+        width:55px;
+        height:55px;
+        min-width:55px;
+        margin-right:10px;
+        margin-top:0;
+    }
+
+    .achieve .ac-icons i{
+        font-size:23px;
+    }
+
+    .ac-content{
+        padding-top:0;
+    }
+
+    .achieve .ac-content h1{
+        font-size:24px;
+        margin-bottom:2px;
+    }
+
+    .achieve .ac-content p{
+        font-size:11px;
+        margin:0;
+    }
+
+
+    /* FEEDBACK TITLE */
+
+    .feed-bar{
+        height:auto;
+        padding:30px 15px;
+    }
+
+    .feed-bar h1{
+        font-size:28px;
+    }
+
+    .feed-bar p{
+        font-size:13px;
+    }
+
+
+    /* FEEDBACK CARDS */
+
+    .feed-card{
+        margin-top:20px;
+    }
+
+    .feed-card .card{
+        margin-bottom:20px;
+    }
+
+    .feed-card .card-body{
+        padding:25px 18px;
+    }
+
+    .feed-card h3{
+        font-size:22px;
+    }
+
+
+    /* FEEDBACK FORM */
+
+    .feed-form{
+        margin-top:25px;
+        margin-bottom:40px;
+    }
+
+    .feed-form .col-md-4{
+        padding:35px 25px;
+        border-radius:20px;
+        min-height:280px;
+    }
+
+    .feed-form .col-md-4 i{
+        font-size:60px;
+    }
+
+    .feed-form .fmess h2{
+        font-size:25px;
+    }
+
+    .feed-form .fmess p{
+        font-size:13px;
+    }
+
+    .feed-form .col-md-8{
+        padding:30px 20px;
+        border-radius:20px;
+    }
+
+    .feed-form form h1{
+        font-size:26px;
+    }
+
+
+    /* FOOTER */
+
+    footer{
+        padding:40px 20px 20px;
+    }
+
+    .footer-col{
+        margin-bottom:30px;
+    }
+
+    .footer-col h3{
+        font-size:20px;
+    }
+
+
+    /* COURSES PAGE HERO */
+
+    .courses-hero{
+        min-height:250px;
+    }
+
+    .courses-hero-content{
+        padding:30px 15px;
+    }
+
+    .courses-hero h1{
+        font-size:36px;
+    }
+
+    .courses-hero-content > p:last-child{
+        font-size:14px;
+    }
+
+
+    /* COURSES PAGE CARDS */
+
+    .all-courses{
+        padding:45px 0;
+    }
+
+    .all-courses .head-title h1{
+        font-size:27px;
+        text-align:center;
+    }
+
+    .course-card{
+        padding:22px;
+    }
+
+    .course-card h3{
+        font-size:20px;
+    }
+
+    .course-card > p{
+        font-size:14px;
+    }
+
+    .course-info{
+        padding:12px 5px;
+    }
+
+    .course-buttons{
+        flex-wrap:wrap;
+    }
+
+    .btn-view,
+    .btn-enroll{
+        flex:1;
+        text-align:center;
+    }
+
+
+    /* HELP BOX */
+
+    .course-help{
+        padding-bottom:40px;
+    }
+
+    .help-box{
+        padding:25px 20px;
+        text-align:center;
+        justify-content:center;
+    }
+
+    .help-icon{
+        margin:auto;
+    }
+
+    .help-box h3{
+        font-size:19px;
+    }
+
+    .help-box p{
+        font-size:13px;
+    }
+
+    .help-box .btn{
+        margin:10px auto 0;
+    }
+
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px){
+
+    .navbar-brand img{
+        width:105px;
+    }
+
+    .carousel-item img{
+        height:230px;
+    }
+
+    .xy{
+        left:5%;
+    }
+
+    .xy span{
+        font-size:24px;
+    }
+
+    .xy .btn{
+        padding:7px 15px;
+        font-size:12px;
+    }
+
+
+    /* Features */
+
+    .info .card{
+        min-height:115px;
+    }
+
+    .info .content h5{
+        font-size:15px;
+    }
+
+    .info .content p{
+        font-size:12px;
+    }
+
+
+    /* Achievement  */
+
+    .achieve .col-md-3{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .achieve .ac-content h1{
+        font-size:23px;
+    }
+
+
+    /* About */
+
+    .about-us h3{
+        font-size:23px;
+    }
+
+
+    /* Feedback */
+
+    .feed-card i{
+        font-size:40px;
+    }
+
+    .feed-card h3{
+        font-size:20px;
+    }
+
+
+    /* Courses */
+
+    .courses-hero h1{
+        font-size:32px;
+    }
+
+    .course-card{
+        padding:20px;
+    }
+
+    .course-buttons{
+        flex-direction:column;
+    }
+
+    .btn-view,
+    .btn-enroll{
+        width:100%;
+    }
+
+}

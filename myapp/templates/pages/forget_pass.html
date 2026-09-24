@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} Forget password Page {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class ="loginpage">
+    <div class="login-container">
+        <form class="login-form" method="POST">
+            {% csrf_token %}
+            <h2>Reset Password</h2>
+            {% include "pages/msg.html" %}
+            <p>Please enter your details to reset pass</p>
+            
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name = "username" placeholder="Enter your email" >
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" >
+            </div>
+            <div class="input-group">
+                <label for="password">Confirm Password</label>
+                <input type="password" id="password" name="confirm_password" placeholder="Re-enter password" >
+            </div>
+            
+            
+            <button type="submit" class="login-btn">Change Password</button>
+            
+        
+        </form>
+    </div>
+</body>
+</html>
