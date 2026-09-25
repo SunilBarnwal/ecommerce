@@ -221,4 +221,4 @@ def view_details(request, product_id):
     context = {
         'product': product,
     }
-    return render(request, 'pages/viewdetails.html', context)
+    return render(request, 'pages/viewDetails.html', context)
