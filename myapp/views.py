@@ -1,9 +1,9 @@
-from django.contrib.admin import action
+
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
-from django.template import context
+
 from .models import *
 from django.http import JsonResponse
 from django.db.models import Sum
@@ -184,28 +184,34 @@ def cart_items(request):
 def update_cart_item(request, product_id, action):
 
     if not request.user.is_authenticated:
-        messages.error(request,'You need to be logged in to update your cart.')
-        return redirect("login_page")
+        messages.error(
+            request,
+            'You need to be logged in to update your cart.'
+        )
+        return redirect('login_page')
 
-    cart_item = CartItems.objects.filter(product_id=product_id,cart__user=request.user).first()
+    cart_item = CartItems.objects.filter(
+        product_id=product_id,
+        cart__user=request.user
+    ).first()
 
     if cart_item is None:
-        messages.error(request,'Cart item not found')
-        return redirect('cart_items')
+        messages.error(request, 'Cart item not found.')
+        return redirect('cartItems')
 
     if action == 'increase':
         cart_item.quantity += 1
+        cart_item.save()
 
     elif action == 'decrease':
-        cart_item.quantity -= 1
-
-        if cart_item.quantity <= 0:
+        if cart_item.quantity > 1:
+            cart_item.quantity -= 1
+            cart_item.save()
+        else:
             cart_item.delete()
-            messages.success(request,'Item removed from cart.')
-            return redirect('cart_items')
+            messages.success(request, 'Item removed from cart.')
 
-    cart_item.save()
-    return redirect('cart_items')
+    return redirect('cartItems')
     
 
     

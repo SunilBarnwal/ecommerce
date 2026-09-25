@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -44,6 +45,7 @@
 
 <div class="container cart-container">
 
+    <!-- Messages -->
     {% if messages %}
         {% for message in messages %}
             <div class="alert alert-success">
@@ -51,6 +53,7 @@
             </div>
         {% endfor %}
     {% endif %}
+
 
     <div class="row g-4">
 
@@ -61,25 +64,38 @@
             <div class="cart-card">
 
                 <div class="cart-card-header">
+
                     <h4>
                         <i class="bi bi-bag-check"></i>
                         Cart Items
                     </h4>
 
-                    <span>{{ cart_items|length }} Product{{ cart_items|length|pluralize }}</span>
+                    <span>
+                        {{ cart_items|length }}
+                        Product{{ cart_items|length|pluralize }}
+                    </span>
+
                 </div>
 
 
-                <!-- PRODUCT -->
+                <!-- ================= PRODUCTS ================= -->
 
                 {% for cart_item in cart_items %}
+
                 <div class="product">
 
                     <!-- IMAGE -->
                     <div class="product-img">
+
                         {% if cart_item.product.prod_image %}
-                            <img src="{{ cart_item.product.prod_image.url }}" alt="{{ cart_item.product.name }}">
+
+                            <img
+                                src="{{ cart_item.product.prod_image.url }}"
+                                alt="{{ cart_item.product.name }}"
+                            >
+
                         {% endif %}
+
                     </div>
 
 
@@ -87,60 +103,113 @@
 
                     <div class="product-info">
 
-                        <h3>{{ cart_item.product.name }}</h3>
-                        <p class="product-subtitle">{{ cart_item.product.desc }}</p>
+                        <h3>
+                            {{ cart_item.product.name }}
+                        </h3>
+
+                        <p class="product-subtitle">
+                            {{ cart_item.product.desc }}
+                        </p>
 
 
-                            <!-- RATING -->
+                        <!-- RATING -->
 
                         <div class="rating">
 
-                                <span>
-                                    ★★★★★
-                                </span>
+                            <span>
+                                ★★★★★
+                            </span>
 
-                                <small>
-                                    4.7 (9 Reviews)
-                                </small>
+                            <small>
+                                4.7 (9 Reviews)
+                            </small>
 
                         </div>
 
 
-                            <!-- PRICE -->
+                        <!-- PRICE + QUANTITY -->
 
                         <div class="product-meta">
+
+                            <!-- PRODUCT PRICE -->
+
                             <div class="product-price">
-                                <strong>₹{{ cart_item.product.price }}</strong>
+
+                                <strong>
+                                    ₹{{ cart_item.product.price }}
+                                </strong>
+
                             </div>
 
-                            <div class="quantity-area">
-                                <span>Quantity:</span>
 
-                                <form  action="{% url 'update_cart_item' cart_item.product.id 'decrease' %}">
+                            <!-- QUANTITY -->
+
+                            <div class="quantity-area">
+
+                                <span>
+                                    Quantity:
+                                </span>
+
+
+                                <!-- DECREASE -->
+
+                                <form
+                                    method="POST"
+                                    action="{% url 'update_cart_item' cart_item.product.id 'decrease' %}"
+                                >
+
                                     {% csrf_token %}
-                                    <button class="btn bg-danger btn-sm" type="submit">-</button>
+
+                                    <button
+                                        type="submit"
+                                        class="btn bg-danger btn-sm"
+                                    >
+                                        -
+                                    </button>
+
                                 </form>
 
-                                <span id="quantity">
+
+                                <!-- CURRENT QUANTITY -->
+
+                                <span class="quantity">
                                     {{ cart_item.quantity }}
                                 </span>
 
-                                <form  action="{% url 'update_cart_item' cart_item.product.id 'increase' %}">
+
+                                <!-- INCREASE -->
+
+                                <form
+                                    method="POST"
+                                    action="{% url 'update_cart_item' cart_item.product.id 'increase' %}"
+                                >
+
                                     {% csrf_token %}
-                                    <button class="btn bg-danger btn-sm" type="submit">+</button>
+
+                                    <button
+                                        type="submit"
+                                        class="btn bg-danger btn-sm"
+                                    >
+                                        +
+                                    </button>
+
                                 </form>
-                                
-                                
-                                
+
                             </div>
+
                         </div>
 
                     </div>
 
                 </div>
 
+
                 {% empty %}
-                    <p class="p-4 mb-0">Your cart is empty.</p>
+
+                    <p class="p-4 mb-0">
+                        Your cart is empty.
+                    </p>
+
                 {% endfor %}
 
             </div>
@@ -159,10 +228,14 @@
                 </h4>
 
 
+                <!-- PRICE -->
+
                 <div class="price-row">
 
                     <span>
-                        Price ({{ total_items }} item{{ total_items|pluralize }})
+                        Price
+                        ({{ total_items }}
+                        item{{ total_items|pluralize }})
                     </span>
 
                     <span id="price">
@@ -171,6 +244,8 @@
 
                 </div>
 
+
+                <!-- DISCOUNT -->
 
                 <div class="price-row discount">
 
@@ -185,6 +260,8 @@
                 </div>
 
 
+                <!-- COUPON -->
+
                 <div class="price-row coupon">
 
                     <span>
@@ -197,6 +274,8 @@
 
                 </div>
 
+
+                <!-- DELIVERY -->
 
                 <div class="price-row">
 
@@ -214,6 +293,8 @@
                 <hr>
 
 
+                <!-- TOTAL -->
+
                 <div class="total-row">
 
                     <span>
@@ -227,14 +308,18 @@
                 </div>
 
 
+                <!-- SAVING -->
+
                 <div class="saving-box">
 
                     <i class="bi bi-tag-fill"></i>
 
                     You will save
+
                     <strong id="saving">
                         ₹0.00
                     </strong>
+
                     on this order
 
                 </div>
@@ -242,7 +327,10 @@
 
                 <!-- BUY NOW -->
 
-                <button class="buy-now" type="button">
+                <button
+                    class="buy-now"
+                    type="button"
+                >
 
                     <i class="bi bi-lightning-fill"></i>
 

@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-(#+6kph(p!ya)hp2+(wa86sr9mg2x6d@*zpm2*7dv3qykg-^=1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecommerce-z0no.onrender.com']
+ALLOWED_HOSTS = ['ecommerce-z0no.onrender.com','*']
 
 CSRF_TRUSTED_ORIGINS = ['https://ecommerce-z0no.onrender.com']
 
